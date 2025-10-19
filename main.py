@@ -1,9 +1,8 @@
-def get_book_text(path_to_file):
-    with open(path_to_file) as f:# do something with f (the file) here
-        file_contents = f.read()# f is a file object
-        return file_contents
-    
-def main():
-    print(get_book_text("/home/toby/projects/bookbot/books/frankenstein.txt"))
 
-main()
+from stats import count_words, count_characters
+    
+word_count = count_words("/home/toby/projects/bookbot/books/frankenstein.txt")
+character_count = count_characters("/home/toby/projects/bookbot/books/frankenstein.txt")
+
+print("Found " + str(word_count) + " total words")
+print(character_count)
