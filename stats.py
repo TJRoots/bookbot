@@ -16,3 +16,8 @@ def count_characters(file_path):
         else:
             character_counts[char] = 1
     return character_counts
+
+def sorted_character_count(file_path):
+    character_counts = count_characters(file_path)
+    sorted_by_freq = sorted(character_counts.items(), key=lambda item: item[1], reverse=True)
+    return sorted_by_freq
